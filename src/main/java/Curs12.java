@@ -1,0 +1,19 @@
+<plugins>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+         <version>1.4</version>
+         <executions>
+          <execution>
+            <phase>process-resources</phase>
+            <goals>
+             <goal>run</goal>
+            </goals>
+            <configuration>
+               <target>
+                 <replaceregexp file="quotes.txt" match=".*" replace="${project.version}" byline="true" />
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+   </plugins>
